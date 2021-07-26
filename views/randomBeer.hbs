@@ -1,0 +1,17 @@
+<div id='random-beer-page'>
+
+{{#each beer}}
+<div>
+    {{> beerpartials}}
+
+   <ul>{{#each this.food_pairing}}
+        <li>{{this}}</li>
+    {{/each}}</ul>
+
+    <p>{{this.brewers_tips}}</p>
+
+</div>
+
+{{/each}}
+
+</div>
