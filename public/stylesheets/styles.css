@@ -11,6 +11,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #bfbfbf;
 }
 
 nav {
@@ -19,13 +20,30 @@ nav {
   justify-content: flex-start;
   background-color: #2081c3;
   color: white;
+  padding-left: 2em;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  /* margin: auto 1em auto 1em; */
-  padding: 1em;
+  margin: 1em;
+}
+
+nav a:hover {
+  color: #7bc9ff;
+}
+
+footer {
+  background-color: #0a2c42;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 0.5em 0.5em 0.5em 2em;
+}
+
+footer p {
+  padding-left: 1em;
 }
 
 #home-page-content {
@@ -33,6 +51,7 @@ nav a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 5em;
 }
 
 #home-page-content a {
@@ -44,22 +63,66 @@ nav a {
 }
 
 #home-page img {
-  width: 30%;
+  height: 300px;
 }
 
-#beers-page ul {
-  list-style-type: none;
+#beers-page {
+  display: grid;
+  gap: 15px;
+  padding: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-footer {
-  background-color: #0a2c42;
-  color: white;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 0.5em;
+#beers-page .beer-card {
+  border: 1px solid #bfbfbf;
+  margin: 5px;
+  padding: 2em;
+  box-sizing: border-box;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-footer p {
-  padding-left: 1em;
+#beers-page .beer-card img {
+  height: 200px;
+}
+
+#beers-page .beer-card a {
+  color: black;
+  text-decoration: none;
+  text-align: center;
+}
+
+#beers-page .beer-card a:hover {
+  color: #bfbfbf;
+  text-decoration: none;
+}
+
+#beers-page .beer-card h3,
+p:nth-child(3) {
+  text-align: center;
+}
+
+#beers-page p:nth-child(4) {
+  text-align: justify;
+}
+
+#one-beer-div {
+  display: flex;
+  flex-direction: row;
+}
+
+#one-beer-div div {
+  padding: 1em;
+}
+
+.single-beer-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#one-beer-div img {
+  height: 400px;
 }

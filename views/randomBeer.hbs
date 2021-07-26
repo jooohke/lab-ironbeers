@@ -1,17 +1,7 @@
-<div id='random-beer-page'>
+<div id='random-beer-page' class="single-beer-page">
 
 {{#each beer}}
-<div>
-    {{> beerpartials}}
-
-   <ul>{{#each this.food_pairing}}
-        <li>{{this}}</li>
-    {{/each}}</ul>
-
-    <p>{{this.brewers_tips}}</p>
-
-</div>
-
+{{> oneBeerPartial}}
 {{/each}}
 
 </div>
